@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Belajar HTML</title>
+</head>
+<body>
+    <h1 id="judul">Judul Lama</h1>
+    <h2 id="subjek">Subjek</h2>
+    <input type="number" id="angka1">
+    <input type="number" id="angka2">
+    <!-- <button id="tombol" onclick="hitung()">Hitung</button> -->
+    <button id="tombol">Hitung</button>
+    <p>Hasilnya adalah <span id="hasil"></span></p>
+    <script>
+        // var x = 1;
+        // var y = 2;
+        // var hasil = x * y;
+        // console.log('hasil', x, 'dikali dengan', y, 'adalah', hasil)
+        document.getElementById('judul').innerText = 'Judul Baru';
+        // ini untuk menggunakan attribute onlclick di html
+        function hitung () {
+            var hasil = parseInt(document.getElementById('angka1').value) + parseInt(document.getElementById('angka2').value);
+            document.getElementById('hasil').innerText = hasil;
+        }
+        // ini untuk menggunakan event listener via js
+        document.getElementById('tombol').addEventListener('click', function (e) {
+            var hasil = parseInt(document.getElementById('angka1').value) + parseInt(document.getElementById('angka2').value);
+            document.getElementById('hasil').innerText = hasil;
+        });
+        
+    </script>
+</body>
+</html>
